@@ -1,14 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import Categories from '../../components/Category/Categories';
+import Header from '../../components/Home/Header';
+import SafeView from '../../templates/SafeArea/SafeAreaView';
 const HomeScreen = () => {
+  const [category, setCategory] = React.useState('All');
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
-  )
-}
+    <SafeView>
+      <Header />
+      {/*  categories */}
+      <Categories selectedCategory={category} setSelectedCategory={setCategory} />
+    </SafeView>
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
