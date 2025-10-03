@@ -13,6 +13,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { scale } from 'react-native-size-matters';
 import useDebounce from '../../hooks/useDebounce';
 import RangeSlider from '../RangeSlider/RangeSlider';
+import tailwind from 'twrnc';
 
 const { width, height } = Dimensions.get('window');
 
@@ -172,7 +173,7 @@ const ProductsFilteringModal: React.FC<ProductsFilteringModalProps> = ({
             style={styles.scrollView}
             showsVerticalScrollIndicator={false}
           >
-            <View style={{paddingHorizontal: 20}}>
+            <View style={tailwind`px-5`}>
 
             {/* Genders Section */}
             <View style={styles.section}>
@@ -256,10 +257,8 @@ const ProductsFilteringModal: React.FC<ProductsFilteringModalProps> = ({
 
             {/* Price Range Section */}
             <View style={styles.section}>
-              <Text style={[styles.sectionTitle, {
-                paddingHorizontal: 20,
-              }]}>Price Range</Text>
-              <GestureHandlerRootView style={{ flex: 1 }}>
+              <Text style={[styles.sectionTitle, tailwind`px-5`]}>Price Range</Text>
+              <GestureHandlerRootView style={tailwind`flex-1`}>
                 <View style={styles.sliderContainer}>
                   {/* range slider */}
                   <RangeSlider

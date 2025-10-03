@@ -10,11 +10,17 @@ import tw from 'twrnc';
 
 const data = [
   { id: '1', title: 'All' },
+  { id: '11', title: 'Men' },
+  { id: '12', title: 'Women' },
+  { id: '10', title: 'Kids' },
   { id: '2', title: 'T-Shirt' },
   { id: '3', title: 'Pants' },
   { id: '4', title: 'Shoes' },
   { id: '5', title: 'Shirt' },
-  { id: '6', title: 'Suit' },
+  { id: '6', title: 'Dress' },
+  { id: '7', title: 'Hoodie' },
+  { id: '8', title: 'Jacket' },
+  { id: '9', title: 'Top' },
 ];
 
 type CategoriesProps = {
@@ -27,7 +33,7 @@ const Categories = ({
   setSelectedCategory,
 }: CategoriesProps) => {
   return (
-    <View style={tw`mt-4 px-5`}>
+    <View style={tw`mt-3 px-5 pb-5`}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {data.map(({ title, id }) => (
           <TouchableOpacity
@@ -39,7 +45,6 @@ const Categories = ({
               {
                 borderColor: '#E6E6E6',
                 borderWidth: 1,
-                
               },
             )}
           >

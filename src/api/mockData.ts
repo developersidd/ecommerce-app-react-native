@@ -1,6 +1,6 @@
-import type { Product } from '../lib/types/product';
+import type { ProductType } from '../lib/types/product';
 
-export const mockProducts: Product[] = [
+export const mockProducts: ProductType[] = [
   // 👕 Men's T-Shirts (6)
   {
     _id: 'p1',
@@ -12,7 +12,7 @@ export const mockProducts: Product[] = [
     ],
     price: 25,
     discountedAmount: 10,
-    category: 'Men',
+    category: ['Men', 'T-Shirt'],
     description:
       'A comfortable classic white cotton t-shirt for everyday wear.',
     size: ['S', 'M', 'L', 'XL'],
@@ -58,7 +58,7 @@ export const mockProducts: Product[] = [
     ],
     price: 30,
     discountedAmount: 10,
-    category: 'Men',
+    category: ['Men', 'T-Shirt'],
     description: 'Trendy black t-shirt with a stylish graphic print.',
     size: ['M', 'L', 'XL'],
     reviewData: {
@@ -102,7 +102,7 @@ export const mockProducts: Product[] = [
       'https://picsum.photos/seed/mens-blue-round-neck-2/600/800',
     ],
     price: 28,
-    category: 'Men',
+    category: ['Men', 'T-Shirt'],
     description: 'Soft blue t-shirt with round neck and short sleeves.',
     size: ['S', 'M', 'L'],
     reviewData: {
@@ -144,7 +144,7 @@ export const mockProducts: Product[] = [
     images: ['https://picsum.photos/seed/mens-striped-polo-1/600/800'],
     price: 35,
     discountedAmount: 10,
-    category: 'Men',
+    category: ['Men', 'T-Shirt'],
     description: 'Casual striped polo t-shirt perfect for outings.',
     size: ['M', 'L', 'XL'],
     reviewData: {
@@ -185,7 +185,7 @@ export const mockProducts: Product[] = [
     image: '../assets/image/product/t-shirt-5.png',
     images: ['https://picsum.photos/seed/mens-grey-sports-1/600/800'],
     price: 32,
-    category: 'Men',
+    category: ['Men', 'T-Shirt'],
     description: 'Lightweight grey sports t-shirt for gym and running.',
     size: ['S', 'M', 'L', 'XL'],
     reviewData: {
@@ -226,7 +226,7 @@ export const mockProducts: Product[] = [
     image: '../assets/image/product/t-shirt-6.png',
     images: ['https://picsum.photos/seed/mens-red-casual-1/600/800'],
     price: 26,
-    category: 'Men',
+    category: ['Men', 'T-Shirt'],
     description: 'Bright red casual t-shirt made with 100% cotton.',
     size: ['M', 'L'],
     reviewData: {
@@ -270,7 +270,7 @@ export const mockProducts: Product[] = [
     images: ['https://picsum.photos/seed/womens-evening-dress-1/600/800'],
     price: 80,
     discountedAmount: 10,
-    category: 'Women',
+    category: ['Women', 'Dress'],
     description: 'An elegant black evening dress for special occasions.',
     size: ['S', 'M', 'L'],
     reviewData: {
@@ -311,7 +311,7 @@ export const mockProducts: Product[] = [
     image: 'https://picsum.photos/seed/womens-floral-dress/600/800',
     images: ['https://picsum.photos/seed/womens-floral-dress-1/600/800'],
     price: 55,
-    category: 'Women',
+    category: ['Women', 'Dress'],
     description: 'Beautiful floral print summer dress.',
     size: ['S', 'M', 'L', 'XL'],
     reviewData: {
@@ -348,12 +348,12 @@ export const mockProducts: Product[] = [
   },
   {
     _id: 'w3',
-    name: 'Casual White Blouse',
+    name: 'Casual White Shirt',
     image: 'https://picsum.photos/seed/womens-white-blouse/600/800',
     images: ['https://picsum.photos/seed/womens-white-blouse-1/600/800'],
     price: 40,
-    category: 'Women',
-    description: 'A lightweight white blouse for casual wear.',
+    category: ['Women', 'Shirt'],
+    description: 'A lightweight white shirt for casual wear.',
     size: ['S', 'M', 'L'],
     reviewData: {
       avgRating: 4.3,
@@ -394,7 +394,7 @@ export const mockProducts: Product[] = [
     images: ['https://picsum.photos/seed/womens-denim-jacket-1/600/800'],
     price: 70,
     discountedAmount: 10,
-    category: 'Women',
+    category: ['Women', 'Jacket'],
     description: 'Trendy blue denim jacket with front pockets.',
     size: ['M', 'L'],
     reviewData: {
@@ -435,7 +435,7 @@ export const mockProducts: Product[] = [
     image: 'https://picsum.photos/seed/womens-casual-top/600/800',
     images: ['https://picsum.photos/seed/womens-casual-top-1/600/800'],
     price: 35,
-    category: 'Women',
+    category: ['Women', 'Top'],
     description: 'Casual top for everyday wear.',
     size: ['S', 'M', 'L', 'XL'],
     reviewData: {
@@ -478,7 +478,7 @@ export const mockProducts: Product[] = [
     image: 'https://picsum.photos/seed/kids-summer-dress/600/800',
     images: ['https://picsum.photos/seed/kids-summer-dress-1/600/800'],
     price: 30,
-    category: 'Kids',
+    category: ['Kids', 'Dress'],
     description: 'Adorable floral summer dress for kids.',
     size: ['2-3Y', '4-5Y', '6-7Y'],
     reviewData: {
@@ -519,7 +519,7 @@ export const mockProducts: Product[] = [
     image: 'https://picsum.photos/seed/kids-graphic-tee/600/800',
     images: ['https://picsum.photos/seed/kids-graphic-tee-1/600/800'],
     price: 20,
-    category: 'Kids',
+    category: ['Kids', 'T-Shirt'],
     description: 'Cool graphic t-shirt for boys.',
     size: ['2-3Y', '4-5Y', '6-7Y'],
     reviewData: {
@@ -560,7 +560,7 @@ export const mockProducts: Product[] = [
     image: 'https://picsum.photos/seed/kids-hoodie/600/800',
     images: ['https://picsum.photos/seed/kids-hoodie-1/600/800'],
     price: 35,
-    category: 'Kids',
+    category: ['Kids', 'Hoodie'],
     description: 'Warm and soft hoodie for kids.',
     size: ['4-5Y', '6-7Y', '8-9Y'],
     reviewData: {
@@ -601,7 +601,7 @@ export const mockProducts: Product[] = [
     image: 'https://picsum.photos/seed/kids-party-dress/600/800',
     images: ['https://picsum.photos/seed/kids-party-dress-1/600/800'],
     price: 50,
-    category: 'Kids',
+    category: ['Kids', 'Dress'],
     description: 'Charming party dress for little girls.',
     size: ['2-3Y', '4-5Y', '6-7Y'],
     reviewData: {
@@ -642,7 +642,7 @@ export const mockProducts: Product[] = [
     image: 'https://picsum.photos/seed/kids-pajama-set/600/800',
     images: ['https://picsum.photos/seed/kids-pajama-set-1/600/800'],
     price: 28,
-    category: 'Kids',
+    category: ['Kids', 'Pajama'],
     description: 'Comfortable pajama set for kids’ bedtime.',
     size: ['2-3Y', '4-5Y', '6-7Y'],
     reviewData: {

@@ -12,7 +12,7 @@ import useDebounce from '../../hooks/useDebounce';
 import ProductsFilteringModal from './ProductsFilteringModal';
 const SearchFiltering = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   // Perform search operation here
   const handleSearchChange = (text: string) => {
     console.log('Searching for:', text);

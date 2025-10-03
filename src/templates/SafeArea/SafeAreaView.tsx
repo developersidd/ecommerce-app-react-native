@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { StyleSheet } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import {
+  SafeAreaView,
+  SafeAreaViewProps,
+} from 'react-native-safe-area-context';
+import tailwind from 'twrnc';
 
-type SafeAreaViewProps = {
-  children: React.ReactNode;
-};
+type SafeViewProps = PropsWithChildren<
+  {
+    style?: string;
+  } & Omit<SafeAreaViewProps, 'mode'>
+>;
 
-const SafeView = ({ children }: SafeAreaViewProps) => {
+const SafeView = ({ children, style }: SafeViewProps) => {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView>{children}</SafeAreaView>
-    </SafeAreaProvider>
+    <SafeAreaView style={[style, tailwind`flex-1`]}>{children}</SafeAreaView>
   );
 };
 
